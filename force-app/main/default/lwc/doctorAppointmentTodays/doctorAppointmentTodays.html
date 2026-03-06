@@ -1,0 +1,30 @@
+<template>
+    <lightning-card title="Doctor Appointments">
+
+        <div class="slds-var-p-horizontal_medium slds-var-p-top_small">
+            <lightning-combobox
+                name="appointmentFilter"
+                label="View Appointments"
+                value={selectedFilter}
+                options={filterOptions}
+                onchange={handleFilterChange}>
+            </lightning-combobox>
+        </div>
+
+        <template if:true={appointments.length}>
+            <lightning-datatable
+                key-field="Id"
+                data={appointments}
+                columns={columns}
+                hide-checkbox-column>
+            </lightning-datatable>
+        </template>
+
+        <template if:false={appointments.length}>
+            <div class="slds-var-p-around_medium">
+                No appointments found.
+            </div>
+        </template>
+
+    </lightning-card>
+</template>

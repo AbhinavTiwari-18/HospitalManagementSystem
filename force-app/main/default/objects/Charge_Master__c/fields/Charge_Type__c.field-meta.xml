@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Charge_Type__c</fullName>
+    <label>Charge Type</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Consultation</fullName>
+                <default>false</default>
+                <label>Consultation</label>
+            </value>
+            <value>
+                <fullName>Follow-Up Consultation</fullName>
+                <default>false</default>
+                <label>Follow-Up Consultation</label>
+            </value>
+            <value>
+                <fullName>Emergency Consultation</fullName>
+                <default>false</default>
+                <label>Emergency Consultation</label>
+            </value>
+            <value>
+                <fullName>Specialist Consultation</fullName>
+                <default>false</default>
+                <label>Specialist Consultation</label>
+            </value>
+            <value>
+                <fullName>Admission Fee</fullName>
+                <default>false</default>
+                <label>Admission Fee</label>
+            </value>
+            <value>
+                <fullName>Registration Fee</fullName>
+                <default>false</default>
+                <label>Registration Fee</label>
+            </value>
+            <value>
+                <fullName>Discharge Fee</fullName>
+                <default>false</default>
+                <label>Discharge Fee</label>
+            </value>
+            <value>
+                <fullName>General Bed Charge</fullName>
+                <default>false</default>
+                <label>General Bed Charge</label>
+            </value>
+            <value>
+                <fullName>ICU Bed Charge</fullName>
+                <default>false</default>
+                <label>ICU Bed Charge</label>
+            </value>
+            <value>
+                <fullName>Private Room Charge</fullName>
+                <default>false</default>
+                <label>Private Room Charge</label>
+            </value>
+            <value>
+                <fullName>Semi-Private Room Charge</fullName>
+                <default>false</default>
+                <label>Semi-Private Room Charge</label>
+            </value>
+            <value>
+                <fullName>Ventilator Charge</fullName>
+                <default>false</default>
+                <label>Ventilator Charge</label>
+            </value>
+            <value>
+                <fullName>Nursing Charge</fullName>
+                <default>false</default>
+                <label>Nursing Charge</label>
+            </value>
+            <value>
+                <fullName>Lab Test</fullName>
+                <default>false</default>
+                <label>Lab Test</label>
+            </value>
+            <value>
+                <fullName>Pathology</fullName>
+                <default>false</default>
+                <label>Pathology</label>
+            </value>
+            <value>
+                <fullName>Radiology</fullName>
+                <default>false</default>
+                <label>Radiology</label>
+            </value>
+            <value>
+                <fullName>Imaging</fullName>
+                <default>false</default>
+                <label>Imaging</label>
+            </value>
+            <value>
+                <fullName>Blood Bank</fullName>
+                <default>false</default>
+                <label>Blood Bank</label>
+            </value>
+            <value>
+                <fullName>Minor Procedure</fullName>
+                <default>false</default>
+                <label>Minor Procedure</label>
+            </value>
+            <value>
+                <fullName>Major Procedure</fullName>
+                <default>false</default>
+                <label>Major Procedure</label>
+            </value>
+            <value>
+                <fullName>Surgery</fullName>
+                <default>false</default>
+                <label>Surgery</label>
+            </value>
+            <value>
+                <fullName>Operation Theatre Charge</fullName>
+                <default>false</default>
+                <label>Operation Theatre Charge</label>
+            </value>
+            <value>
+                <fullName>Anesthesia Charge</fullName>
+                <default>false</default>
+                <label>Anesthesia Charge</label>
+            </value>
+            <value>
+                <fullName>Medicine</fullName>
+                <default>false</default>
+                <label>Medicine</label>
+            </value>
+            <value>
+                <fullName>Injection</fullName>
+                <default>false</default>
+                <label>Injection</label>
+            </value>
+            <value>
+                <fullName>Consumables</fullName>
+                <default>false</default>
+                <label>Consumables</label>
+            </value>
+            <value>
+                <fullName>Pharmacy Item</fullName>
+                <default>false</default>
+                <label>Pharmacy Item</label>
+            </value>
+            <value>
+                <fullName>Equipment Usage</fullName>
+                <default>false</default>
+                <label>Equipment Usage</label>
+            </value>
+            <value>
+                <fullName>Monitoring Charge</fullName>
+                <default>false</default>
+                <label>Monitoring Charge</label>
+            </value>
+            <value>
+                <fullName>Service Charge</fullName>
+                <default>false</default>
+                <label>Service Charge</label>
+            </value>
+            <value>
+                <fullName>Ambulance Charge</fullName>
+                <default>false</default>
+                <label>Ambulance Charge</label>
+            </value>
+            <value>
+                <fullName>Insurance Processing Fee</fullName>
+                <default>false</default>
+                <label>Insurance Processing Fee</label>
+            </value>
+            <value>
+                <fullName>Administrative Charge</fullName>
+                <default>false</default>
+                <label>Administrative Charge</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

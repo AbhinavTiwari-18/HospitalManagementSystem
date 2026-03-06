@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Department_Type__c</fullName>
+    <label>Department Type</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>.</fullName>
+                <default>false</default>
+                <label>.</label>
+            </value>
+            <value>
+                <fullName>General Medicine</fullName>
+                <default>false</default>
+                <label>General Medicine</label>
+            </value>
+            <value>
+                <fullName>Cardiology</fullName>
+                <default>false</default>
+                <label>Cardiology</label>
+            </value>
+            <value>
+                <fullName>Neurology</fullName>
+                <default>false</default>
+                <label>Neurology</label>
+            </value>
+            <value>
+                <fullName>Orthopedics</fullName>
+                <default>false</default>
+                <label>Orthopedics</label>
+            </value>
+            <value>
+                <fullName>Pediatrics</fullName>
+                <default>false</default>
+                <label>Pediatrics</label>
+            </value>
+            <value>
+                <fullName>Gynecology &amp; Obstetrics</fullName>
+                <default>false</default>
+                <label>Gynecology &amp; Obstetrics</label>
+            </value>
+            <value>
+                <fullName>Dermatology</fullName>
+                <default>false</default>
+                <label>Dermatology</label>
+            </value>
+            <value>
+                <fullName>ENT</fullName>
+                <default>false</default>
+                <label>ENT</label>
+            </value>
+            <value>
+                <fullName>Ophthalmology</fullName>
+                <default>false</default>
+                <label>Ophthalmology</label>
+            </value>
+            <value>
+                <fullName>Psychiatry</fullName>
+                <default>false</default>
+                <label>Psychiatry</label>
+            </value>
+            <value>
+                <fullName>Emergency</fullName>
+                <default>false</default>
+                <label>Emergency</label>
+            </value>
+            <value>
+                <fullName>General Surgery</fullName>
+                <default>false</default>
+                <label>General Surgery</label>
+            </value>
+            <value>
+                <fullName>Radiology</fullName>
+                <default>false</default>
+                <label>Radiology</label>
+            </value>
+            <value>
+                <fullName>Pathology</fullName>
+                <default>false</default>
+                <label>Pathology</label>
+            </value>
+            <value>
+                <fullName>Microbiology</fullName>
+                <default>false</default>
+                <label>Microbiology</label>
+            </value>
+            <value>
+                <fullName>Biochemistry Lab</fullName>
+                <default>false</default>
+                <label>Biochemistry Lab</label>
+            </value>
+            <value>
+                <fullName>Blood Bank</fullName>
+                <default>false</default>
+                <label>Blood Bank</label>
+            </value>
+            <value>
+                <fullName>Pharmacy</fullName>
+                <default>false</default>
+                <label>Pharmacy</label>
+            </value>
+            <value>
+                <fullName>Physiotherapy</fullName>
+                <default>false</default>
+                <label>Physiotherapy</label>
+            </value>
+            <value>
+                <fullName>Nutrition &amp; Dietetics</fullName>
+                <default>false</default>
+                <label>Nutrition &amp; Dietetics</label>
+            </value>
+            <value>
+                <fullName>Administration</fullName>
+                <default>false</default>
+                <label>Administration</label>
+            </value>
+            <value>
+                <fullName>Human Resources</fullName>
+                <default>false</default>
+                <label>Human Resources</label>
+            </value>
+            <value>
+                <fullName>Finance &amp; Billing</fullName>
+                <default>false</default>
+                <label>Finance &amp; Billing</label>
+            </value>
+            <value>
+                <fullName>IT Support</fullName>
+                <default>false</default>
+                <label>IT Support</label>
+            </value>
+            <value>
+                <fullName>Medical Records</fullName>
+                <default>false</default>
+                <label>Medical Records</label>
+            </value>
+            <value>
+                <fullName>Quality &amp; Compliance</fullName>
+                <default>false</default>
+                <label>Quality &amp; Compliance</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>
