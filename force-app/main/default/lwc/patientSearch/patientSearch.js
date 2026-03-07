@@ -18,7 +18,7 @@ export default class PatientSearch extends LightningElement {
     }
 
     handleSearch() {
-        searchPatients({ searchKey: this.searchKey })
+        searchPatients({ searchKey: this.searchKey }) // imperative call to apex
             .then(result => {
                 this.patients = result;
             })

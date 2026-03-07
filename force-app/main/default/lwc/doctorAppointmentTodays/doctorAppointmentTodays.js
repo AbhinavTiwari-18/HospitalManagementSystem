@@ -3,8 +3,35 @@ import getAppointments from '@salesforce/apex/DoctorAppointmentsController.getAp
 
 const COLUMNS = [
     { label: 'Patient Name', fieldName: 'patientName' },
-    { label: 'Start Time', fieldName: 'Start_Date__c', type: 'date' },
-    { label: 'End Time', fieldName: 'End_Date__c', type: 'date' },
+
+    { 
+        label: 'Start Time',
+        fieldName: 'Start_Date__c',
+        type: 'date',
+        typeAttributes: {
+            year: 'numeric',
+            month: 'short',
+            day: '2-digit',
+            hour: '2-digit',
+            minute: '2-digit',
+            hour12: true
+        }
+    },
+
+    { 
+        label: 'End Time',
+        fieldName: 'End_Date__c',
+        type: 'date',
+        typeAttributes: {
+            year: 'numeric',
+            month: 'short',
+            day: '2-digit',
+            hour: '2-digit',
+            minute: '2-digit',
+            hour12: true
+        }
+    },
+
     { label: 'Employee Name', fieldName: 'employeeName' }
 ];
 
@@ -37,7 +64,8 @@ export default class DoctorAppointmentTodays extends LightningElement {
 
             this.error = undefined;
 
-        } else if (error) {
+        } 
+        else if (error) {
             this.error = error;
             this.appointments = [];
             console.error('Error fetching appointments:', error);
