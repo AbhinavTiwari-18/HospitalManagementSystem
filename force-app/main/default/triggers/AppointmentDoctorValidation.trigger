@@ -1,5 +1,11 @@
 trigger AppointmentDoctorValidation on Appointment__c (before insert, before update) {
 
+    // Get Doctor Record Type Id dynamically
+    Id doctorRecordTypeId = Schema.SObjectType.Employees__c
+        .getRecordTypeInfosByDeveloperName()
+        .get('Doctor')
+        .getRecordTypeId();
+
     Set<Id> doctorIds = new Set<Id>();
 
     for(Appointment__c appt : Trigger.new){
@@ -14,7 +20,7 @@ trigger AppointmentDoctorValidation on Appointment__c (before insert, before upd
     Map<Id, Employees__c> doctorMap = new Map<Id, Employees__c>(
         [SELECT Id
          FROM Employees__c
-         WHERE RecordTypeId = '012gL000004BUEzQAO'
+         WHERE RecordTypeId = :doctorRecordTypeId
          AND Id IN :doctorIds]
     );
 
