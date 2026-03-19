@@ -38,12 +38,7 @@ global with sharing class registerPatient {
             patient.ConditionType__c = validatePicklist('Patient__c', 'ConditionType__c', req.conditionType);
             patient.Status__c = validatePicklist('Patient__c', 'Status__c', req.status);
 
-            // ✅ Multi picklist
-            patient.TreatmentType__c = validateMultiPicklist(
-                'Patient__c',
-                'TreatmentType__c',
-                req.treatmentType
-            );
+
 
             insert patient;
 
@@ -126,7 +121,6 @@ global with sharing class registerPatient {
         public String conditionType;
         public String status;
 
-        public List<String> treatmentType;
     }
 
     // ================================
