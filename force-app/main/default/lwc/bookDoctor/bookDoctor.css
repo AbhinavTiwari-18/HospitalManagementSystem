@@ -1,0 +1,13 @@
+.dropdown {
+    border-radius: 6px;
+    background: white;
+}
+
+.dropdown-item {
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+.dropdown-item:hover {
+    background-color: #f3f3f3;
+}

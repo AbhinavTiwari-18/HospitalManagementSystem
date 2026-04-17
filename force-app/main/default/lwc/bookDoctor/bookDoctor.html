@@ -1,0 +1,123 @@
+<template>
+
+    <!-- STEP 1 -->
+    <template if:true={showSearchForm}>
+        <lightning-card title="Book Doctor Appointment">
+
+            <div class="slds-p-around_medium slds-grid slds-wrap slds-gutters">
+
+                <!-- 🔹 Patient Search -->
+                <div class="slds-col slds-size_1-of-1">
+
+                    <lightning-input 
+                        type="text"
+                        label="Search Patient"
+                        placeholder="Type at least 4 letters..."
+                        value={patientName}
+                       onkeyup={handlePatientSearch}>
+                    </lightning-input>
+
+                    <!-- 🔥 Selected Patient Badge -->
+                    <template if:true={selectedPatientId}>
+                        <div class="slds-m-top_small">
+                            <span class="slds-badge slds-theme_success">
+                                Selected: {patientName}
+                            </span>
+                        </div>
+                    </template>
+
+                    <!-- 🔥 Dropdown -->
+                    <template if:true={patients.length}>
+                        <div class="slds-box slds-m-top_small slds-scrollable_y dropdown"
+                             style="max-height:150px">
+
+                            <template for:each={patients} for:item="p">
+                                <div key={p.Id}
+                                     data-id={p.Id}
+                                     data-name={p.Name}
+                                     onclick={handlePatientSelect}
+                                     class="slds-p-around_small slds-border_bottom slds-truncate dropdown-item">
+
+                                    {p.Name}
+                                </div>
+                            </template>
+
+                        </div>
+                    </template>
+
+                </div>
+
+                <!-- 🔹 Start -->
+                <div class="slds-col slds-size_1-of-2">
+                    <lightning-input 
+                        type="datetime"
+                        label="Start Date & Time"
+                        onchange={handleStartChange}>
+                    </lightning-input>
+                </div>
+
+                <!-- 🔹 End -->
+                <div class="slds-col slds-size_1-of-2">
+                    <lightning-input 
+                        type="datetime"
+                        label="End Date & Time"
+                        onchange={handleEndChange}>
+                    </lightning-input>
+                </div>
+
+                <!-- 🔹 Specialization -->
+                <div class="slds-col slds-size_1-of-1 slds-m-top_small">
+                    <lightning-dual-listbox
+                        label="Select Specialization"
+                        options={specializationOptions}
+                        value={selectedSpecializations}
+                        onchange={handleSpecChange}>
+                    </lightning-dual-listbox>
+                </div>
+
+                <!-- 🔹 Button -->
+                <div class="slds-col slds-size_1-of-1 slds-m-top_medium">
+                    <lightning-button 
+                        variant="brand"
+                        label="Search Doctors"
+                        onclick={searchDoctors}>
+                    </lightning-button>
+                </div>
+
+            </div>
+        </lightning-card>
+    </template>
+
+    <!-- STEP 2 -->
+    <template if:true={showDoctorList}>
+        <lightning-card title="Available Doctors">
+
+            <div class="slds-p-around_medium">
+
+                <lightning-button 
+                    label="Back"
+                    onclick={handleBack}
+                    class="slds-m-bottom_medium">
+                </lightning-button>
+
+                <lightning-datatable
+                    key-field="Id"
+                    data={doctors}
+                    columns={columns}
+                    onrowselection={handleRowSelection}>
+                </lightning-datatable>
+
+                <div class="slds-m-top_medium">
+                    <lightning-button 
+                        variant="brand"
+                        label="Book Appointment"
+                        onclick={bookAppointment}>
+                    </lightning-button>
+                </div>
+
+            </div>
+
+        </lightning-card>
+    </template>
+
+</template>
