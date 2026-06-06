@@ -1,0 +1,51 @@
+<template>
+    <lightning-card title="Create Patient Record" icon-name="standard:contact">
+
+        <div class="slds-p-around_medium">
+
+            <lightning-input label="Patient Name" value={name} onchange={handleChange} data-field="name" required></lightning-input>
+
+            <lightning-input type="date" label="DOB" value={dob} onchange={handleChange} data-field="dob"></lightning-input>
+
+            <lightning-combobox label="Gender" value={gender} options={genderOptions} onchange={handleChange} data-field="gender"></lightning-combobox>
+
+            <lightning-input type="email" label="Email" value={email} onchange={handleChange} data-field="email"></lightning-input>
+
+            <lightning-input type="tel" label="Phone" value={phone} onchange={handleChange} data-field="phone"></lightning-input>
+
+            <lightning-textarea label="Address" value={address} onchange={handleChange} data-field="address"></lightning-textarea>
+
+            <!-- Blood Group -->
+            <lightning-combobox
+                label="Blood Group"
+                value={bloodGroup}
+                options={bloodGroupOptions}
+                onchange={handleChange}
+                data-field="bloodGroup">
+            </lightning-combobox>
+
+            <!-- Condition -->
+            <lightning-combobox
+                label="Condition Type"
+                value={conditionType}
+                options={conditionOptions}
+                onchange={handleChange}
+                data-field="conditionType">
+            </lightning-combobox>
+
+            <!-- Status -->
+            <lightning-combobox
+                label="Status"
+                value={status}
+                options={statusOptions}
+                onchange={handleChange}
+                data-field="status">
+            </lightning-combobox>
+
+            <div class="slds-m-top_medium">
+                <lightning-button label="Create Patient" variant="brand" onclick={createPatient}></lightning-button>
+            </div>
+
+        </div>
+    </lightning-card>
+</template>
